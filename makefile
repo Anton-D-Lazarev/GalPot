@@ -2,15 +2,7 @@
 # Makefile written by McMillan 2008-
 
 
-all: testGalPot.exe findOrbit.exe findOrbitSetTimes.exe \
-	  findOrbitProperties.exe \
-		findManyOrbitProperties.exe findManyOrbitPropertiesfromGalactic.exe \
-		findManyOrbitPropertiesfromEquatorial.exe \
-		findManyOrbitPropertiesfromEquatorialwErrors.exe \
-		findManyOrbitPropertiesfromRAVEMultiGaussian.exe \
-		findManyOrbitPropertiesfromGaiaSimple.exe Coord_converter.exe RotCurve.exe \
-		findOrbitMultiPot.exe \
-		GalPot Other obj/libPyGalPot.so
+all: testGalPot.exe GalPot Other obj/libPyGalPot.so
 
 CPP		= g++
 LIBPOT		= obj/libPot.a
