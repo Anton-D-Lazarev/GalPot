@@ -1,19 +1,19 @@
 # Minimal Makefile for libPyGalPot.so
-all: obj/libPyGalPot.so
+all: GalPot/lib/libPyGalPot.so
 
-obj/libPyGalPot.so:
-	@mkdir -p obj
-	g++ -fpic -O3 -ffast-math -Isrc/ -shared -lm -o $@ \
-	    src/Numerics.cc \
-	    src/WDMath.cc \
-	    src/GalPot.cc \
-	    src/KeplerPot.cc \
-	    src/MiyamotoNagaiPot.cc \
-	    src/MultiPot.cc \
-	    src/OrbitIntegrator.cc \
-	    src/PJMCoords.cc \
-	    src/Random.cc \
-	    src/PyGalPot.cc
+GalPot/lib/libPyGalPot.so:
+	@mkdir -p GalPot/lib
+	g++ -fpic -O3 -ffast-math -IsrcGalPot/include/ -shared -lm -o $@ \
+	    srcGalPot/Numerics.cc \
+	    srcGalPot/WDMath.cc \
+	    srcGalPot/GalPot.cc \
+	    srcGalPot/KeplerPot.cc \
+	    srcGalPot/MiyamotoNagaiPot.cc \
+	    srcGalPot/MultiPot.cc \
+	    srcGalPot/OrbitIntegrator.cc \
+	    srcGalPot/PJMCoords.cc \
+	    srcGalPot/Random.cc \
+	    srcGalPot/PyGalPot.cc
 
 clean:
-	rm -rf obj
+	rm -rf GalPot/lib

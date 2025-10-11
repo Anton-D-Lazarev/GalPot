@@ -10,7 +10,7 @@ from collections import namedtuple
 #print(os.path.dirname(os.path.realpath(__file__)))
 
 lib = cdll.LoadLibrary(os.path.dirname(os.path.realpath(__file__)) +
-                       '/obj/libPyGalPot.so')
+                       '/lib/libPyGalPot.so')
 
 
 
